@@ -35,3 +35,5 @@ all do
 Spark
 ---------------------
 pairs.reduceByKey((accumulatedValue: Int, currentValue: Int) => accumulatedValue + currentValue)
+#### Note:
+- explicit type, need bracket. reduceByKey((x:type, y:type)=> ... )
