@@ -30,3 +30,8 @@ all do
 
 - map on iterator is lazy, put "toList" in the end will fix it.
 - but should use foreach, as it is designed for side effects(won't allow laziness)
+
+
+Spark
+---------------------
+pairs.reduceByKey((accumulatedValue: Int, currentValue: Int) => accumulatedValue + currentValue)
