@@ -31,6 +31,22 @@ all do
 - map on iterator is lazy, put "toList" in the end will fix it.
 - but should use foreach, as it is designed for side effects(won't allow laziness)
 
+### 2.   ==, eq, and equals
+equals in scala is same as equals in java, throw null exception 
+== check for null, then redirect to equals
+eq is scala equivalent to == in java
+
+Examples
+1 equals 2 will return false, as it redirects to Integer.equals(...)
+1 == 2 will return false, as it redirects to Integer.equals(...)
+1 eq 2 will not compile, as it requires both arguments to be of type AnyRef
+new ArrayList() equals new ArrayList() will return true, as it checks the content
+new ArrayList() == new ArrayList() will return true, as it redirects to equals(...)
+new ArrayList() eq new ArrayList() will return false, as both arguments are different instances
+foo equals foo will return true, unless foo is null, then will throw a NullPointerException
+foo == foo will return true, even if foo is null
+foo eq foo will return true, since both arguments link to the same reference 
+
 
 Spark
 ---------------------
