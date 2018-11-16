@@ -47,6 +47,9 @@ Examples
 - foo == foo will return true, even if foo is null
 - foo eq foo will return true, since both arguments link to the same reference 
 
+### 3. A very good command line input parse library
+import org.rogach.scallop._
+https://github.com/scallop/scallop
 
 Spark
 ---------------------
