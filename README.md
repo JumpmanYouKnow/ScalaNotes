@@ -66,6 +66,20 @@ Split by regex: split(String: regex)
 
 Spark
 ---------------------
-pairs.reduceByKey((accumulatedValue: Int, currentValue: Int) => accumulatedValue + currentValue)
+### 1.
+pairs.reduceByKey((accumulatedValue: Int, currentValue: Int) => accumulatedValue + currentValue)  
 #### Note:
-- explicit type, need bracket. reduceByKey((x:type, y:type)=> ... )
+- explicit type, need bracket. reduceByKey((x:type, y:type)=> ... )  
+
+### 2. read parquet files
+import org.apache.spark.sql.SparkSession
+
+val sparkSession = SparkSession.builder.getOrCreate
+
+val lineitemDF = sparkSession.read.parquet("TPC-H-0.1-PARQUET/lineitem")
+
+### 3. Scala REPL
+spark-shell  
+scala >   
+default: SparkSession as spark  
+SparkContext as sc  
