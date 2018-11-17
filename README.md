@@ -102,7 +102,4 @@ show statistic summary for each column: count, mean, stddev, min, max
 Example: https://img-blog.csdn.net/20161012231742058 
 
 #### 2. return dataframe  
-1.first(), last()  
-https://pandas.pydata.org/pandas-docs/stable/generated/pandas.DataFrame.first.html#pandas.DataFrame.first  
-
-2.limit(int n)
+limit(int n)
