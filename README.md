@@ -52,14 +52,14 @@ import org.rogach.scallop._
 https://github.com/scallop/scallop
 
 ### 4. scala split
-java split() takes regular expression string as input only: split(String: regex)
-example: split by character '|', we must escape '|', split("\\|")
-split("|") has a semantic meaning of "split  by empty string or split by empty string"
-thus, "abcde" will be split to (a, b, c, d, e)
-
-scala override the split() function
-Split by character: split(Char: c)
-Split by regex: split(String: regex)
+java split() takes regular expression string as input only: split(String: regex)  
+example: split by character '|', we must escape '|', split("\\|")  
+split("|") has a semantic meaning of "split  by empty string or split by empty string"  
+thus, "abcde" will be split to (a, b, c, d, e)  
+  
+scala override the split() function  
+Split by character: split(Char: c)  
+Split by regex: split(String: regex)  
 
 
 
