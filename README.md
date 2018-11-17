@@ -83,3 +83,20 @@ spark-shell
 scala >   
 default: SparkSession as spark  
 SparkContext as sc  
+
+### 4. spark dataframe
+#### 1. return rows
+ 
+head(n = 5), default = 5
+get first n row
+
+#### 2. return Unit
+show(n = 20), default n = 20  
+print n rows
+  
+show(b = true), default b = true  
+print maximum 20 characters for each row if b == true, else no limit  
+
+describe:  
+show statistic summary for each column: count, mean, stddev, min, max  
+Example: https://img-blog.csdn.net/20161012231742058  
