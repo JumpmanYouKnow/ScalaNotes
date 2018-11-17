@@ -103,3 +103,21 @@ Example: https://img-blog.csdn.net/20161012231742058
 
 #### 2. return dataframe  
 limit(int n)
+
+
+Questions
+--------------------------
+    val a: Either[Int, String] = {
+    if (true) 
+        Left(42) // return an Int
+    else
+        Right("Hello, world") // return a String
+    }
+why the above works but the below doesn't:
+
+    val a: Either[org.apache.spark.rdd.RDD[String],  org.apache.spark.rdd.RDD[org.apache.spark.sql.Row]] = {
+    if (text) 
+        spark.sparkContext.textFile(input_path + "/lineitem.tbl") // read in text file as rdd
+    else
+        sparkSession.read.parquet(input_path + "/lineitem").rdd  //read in parquet file as df, convert to rdd
+    }
