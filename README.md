@@ -120,6 +120,12 @@ Example: https://img-blog.csdn.net/20161012231742058
 #### 2. return dataframe  
 limit(int n)
 
+### 5. Secondary sorting
+http://codingjunkie.net/spark-secondary-sort/
+
+### 6. union 2 rdd and group by key
+rdd1.cogroup(rdd2): (key, iter1, iter2)
+https://spark.apache.org/docs/2.1.1/api/java/org/apache/spark/rdd/PairRDDFunctions.html
 
 Questions
 --------------------------
