@@ -78,7 +78,8 @@ Examples:
     else
         Right(sparkSession.read.parquet(input_path + "/lineitem").rdd)  //read in parquet file as df, convert to rdd
     }
-
+### 6. Immutable map and mutable map
+https://alvinalexander.com/scala/how-to-add-update-remove-elements-immutable-maps-scala
 
 Spark
 ---------------------
