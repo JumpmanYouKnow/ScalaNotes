@@ -8,10 +8,11 @@ Therefore I want to open this repo as my scala notes.
 
 
 
-Side Effect
+Generic
 ---------------------
 
-### 1. map on iterator no side effect: https://stackoverflow.com/questions/12631778/scala-map-on-iterator-does-not-produce-side-effects
+### 1. side effect
+####1. map on iterator no side effect: https://stackoverflow.com/questions/12631778/scala-map-on-iterator-does-not-produce-side-effects
 ```scala
 > List(1,2,3,4).iterator.map((x: Int) => println(x))
 
