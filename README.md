@@ -137,6 +137,9 @@ http://codingjunkie.net/spark-secondary-sort/
 rdd1.cogroup(rdd2): (key, iter1, iter2)
 https://spark.apache.org/docs/2.1.1/api/java/org/apache/spark/rdd/PairRDDFunctions.html
 
+### 7. sortByKey costumize ordering function
+https://www.iteblog.com/archives/1240.html
+
 Questions
 --------------------------
 
