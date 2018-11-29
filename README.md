@@ -12,7 +12,7 @@ Side Effect
 ---------------------
 
 ### 1. map on iterator no side effect: https://stackoverflow.com/questions/12631778/scala-map-on-iterator-does-not-produce-side-effects
-
+```scala
 > List(1,2,3,4).iterator.map((x: Int) => println(x))
 
 doesn't print
@@ -26,6 +26,7 @@ while
 > List(1,2,3,4).iterator.foreach((x: Int) => println(x))
 
 all do
+```
 #### Note:
 
 - map on iterator is lazy, put "toList" in the end will fix it.
@@ -62,6 +63,7 @@ Split by character: split(Char: c)
 Split by regex: split(String: regex)  
 
 ### 5. scala Either, to allow different return types
+```scala
 Note： Left and Right are wrappers, extends Either
     val a: Either[Int, String] = {
     if (true) 
@@ -69,38 +71,44 @@ Note： Left and Right are wrappers, extends Either
     else
         Right("Hello, world") // return a String
     }
+```
 
 Examples:
-
+```scala
     val a: Either[org.apache.spark.rdd.RDD[String],  org.apache.spark.rdd.RDD[org.apache.spark.sql.Row]] = {
     if (text) 
         Left(spark.sparkContext.textFile(input_path + "/lineitem.tbl")) // read in text file as rdd
     else
         Right(sparkSession.read.parquet(input_path + "/lineitem").rdd)  //read in parquet file as df, convert to rdd
     }
+```
 ### 6. Immutable map and mutable map
 https://alvinalexander.com/scala/how-to-add-update-remove-elements-immutable-maps-scala
 
 Spark
 ---------------------
-### 1.
+### 1. reducyByKey syntax
+```scala
 pairs.reduceByKey((accumulatedValue: Int, currentValue: Int) => accumulatedValue + currentValue)  
+```
 #### Note:
 - explicit type, need bracket. reduceByKey((x:type, y:type)=> ... )  
 
 ### 2. read parquet files
+```scala
 import org.apache.spark.sql.SparkSession
 
 val sparkSession = SparkSession.builder.getOrCreate
 
 val lineitemDF = sparkSession.read.parquet("TPC-H-0.1-PARQUET/lineitem")
-
+```
 ### 3. Scala REPL
+```scala
 spark-shell  
 scala >   
 default: SparkSession as spark  
 SparkContext as sc  
-
+```
 ### 4. spark dataframe
 #### 1. return rows
  
